@@ -6,6 +6,7 @@ from PySide2.QtWidgets import QApplication, QLabel, QPushButton, QVBoxLayout, QM
 from PySide2.QtCore import Qt, QSize, QRect
 from PySide2.QtGui import QPainter, QPen
 
+
 class RenderWidget(QWidget):
 	def __init__(self):
 		super().__init__()
