@@ -27,18 +27,41 @@ class RenderWidget(QWidget):
 
 		for pt in range(0, len(self.points)):
 			painter.drawEllipse(self.points[pt][0] - 10, self.points[pt][1] - 10, 20, 20)
+
+	def mousePressEvent(self, event) :
+		self.selectedPoint = self.findPoint(event.pos().x(), event.pos().y())
+		if(self.selectedPoint == -1) :
+			self.addPoint(event.pos().x(), event.pos().y())
+		elif(event.button() == Qt.RightButton) :
+			self.removePoint(self.selectedPoint)
+		QWidget.update(self)
+
+	def mouseMoveEvent(self, event) :
+		if(self.selectedPoint != -1) :
+			self.points[self.selectedPoint] = [event.pos().x(), event.pos().y()]
+			QWidget.update(self)
 			
 
+	######################
+	# POINTS
 	def addPoint(self, x, y) :
 		self.points.append([x, y])
-		QWidget.update(self)
 
 	def clearPoints(self) :
 		self.points = []
 		QWidget.update(self)
 
-	def mousePressEvent(self, event) :
-		self.addPoint(event.pos().x(), event.pos().y())
+	def removePoint(self, index) :
+		del(self.points[index])
+
+	def findPoint(self, x, y) :
+		for i in range(len(self.points)) :
+			if(abs(self.points[i][0] - x) < 20 and abs(self.points[i][1] - y) < 20) :
+				return i
+		return -1
+	######################
+
+	
 
 
 app = QApplication(sys.argv)
