@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "scurvy", "scurvy.pyproj", "{A9AE5A74-E980-4AFA-BEEF-95D7C4699CD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9AE5A74-E980-4AFA-BEEF-95D7C4699CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9AE5A74-E980-4AFA-BEEF-95D7C4699CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6BAE148-220C-4F84-B9C5-F61FE6C0F88C}
+	EndGlobalSection
+EndGlobal
