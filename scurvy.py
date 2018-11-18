@@ -1,11 +1,8 @@
 import sys
-import random
-
 
 from PySide2.QtWidgets import QApplication, QLabel, QPushButton, QVBoxLayout, QMainWindow, QWidget
 from PySide2.QtCore import Qt, QSize, QRect
 from PySide2.QtGui import QPainter, QPen
-
 
 class RenderWidget(QWidget):
 	def __init__(self):
@@ -71,9 +68,6 @@ mainWidget = QWidget()
 renderAreaWidget = RenderWidget()
 
 layout = QVBoxLayout()
-
-def newPoint() :
-	renderAreaWidget.addPoint(random.randint(0, 200), random.randint(0, 200))
 
 resetButton = QPushButton("Reset")
 resetButton.clicked.connect(renderAreaWidget.clearPoints)
